@@ -50,19 +50,21 @@ def add_list_to_list(lsta, lstb):
     This function takes two lists and appends one to the other,
     returning a list
     """
-    pass  # implement me
+    lsta.extend(lstb)
+    return lsta
+
 
 def list_and_list_to_tuple(lsta, lstb):
     """
     This function takes two lists and returns a tuple containing the two lists
     """
-    pass # implement me
+    return (lsta, lstb)
 
 def list_and_list_to_list(lsta, lstb):
     """
     This function takes two lists and returns a list containing the two lists
     """
-    pass # implement me
+    return [lsta, lstb]
 
 ##
 ##
@@ -72,39 +74,39 @@ def list_from_range(n):
     """
     This function returns list with 0..n as integers in a list
     """
-    pass # implement me
+    return [num for num in range(n)]
 
 def list_from_range2(n, m):
     """
     This function returns list with n..m (without m) as integers in a list
     """
-    pass # implement me
+    return [num for num in range(n, m)]
 
 def list_from_range3(n, m):
     """
     This function returns list with n..m (including m(!)) as integers in a list
     """
-    pass # implement me
+    return list_from_range2(n, m+1)
 
 def list_from_range4(n, m):
     """
     This function returns list with n..m (WITHOUT n and including m) as integers in a list
     """
-    pass # implement me
+    return list_from_range2(n+1, m+1)
 
 def list_from_range_by(n, step):
     """
     This function returns list with 0..n as integers by step in a list
     (read the test)
     """
-    pass # implement me
+    return [num for num in range(0, n, step)]
 
 def rev_list(lst):
     """
     This function returns list which is a reverse of the argument list
     (read the test)
     """
-    pass # implement me
+    return lst[::-1]
   
 def concat_list_indexwise(lst1, lst2):
     """
@@ -113,14 +115,14 @@ def concat_list_indexwise(lst1, lst2):
     then the 1st index item, and so on till the last element. 
     Any leftover items will get added at the end of the new list.
     """
-    parseString # implement me
+    return [a + b for a, b in zip(lst1, lst2)]
 
 def square_each_item(lst):
     """
     This function returns list which each item in argument list has been squared
     (read the test)
     """
-    pass # implement me
+    return [x**2 for x in lst]
 
 def remove_item_from(lst, aaa):
     """
@@ -140,11 +142,11 @@ def leave_item_in(lst, aaa):
     """
     Leave all occurrences of a specific item in a list.
     """
-    pass
+    return [item for item in lst if item == aaa]
 
 
 def length_of(lst):
     """
     return the length of the list
     """
-    pass
+    return len(lst)
