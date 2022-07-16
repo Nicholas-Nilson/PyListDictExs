@@ -7,40 +7,43 @@ def create_list_from_tuple(t):
     """
     This function takes a tuple of elements and returns a list containing those elements of the tuple.
     """
-    pass  # implement me
+    return list(t)
     
 def drop_last(lst):
     """
     This function takes a list and returns a list with the last item removed.
     """
-    pass  # implement me
+    lst.pop(-1)
+    return lst
 
 
 def drop_first_two(lst):
     """
     This function takes a list and returns a list with the first two items removed.
     """
-    pass  # implement me
+    return lst[2:]
 
 def drop_mangle(lst):
     """
     This function takes a list and returns a list with the first two items AND last item removed.
     """
-    pass  # implement me
+    return lst[2:-1]
 
 def add_item_front(lst, a):
     """
     This function takes a list and an item,
     returning the list with the item prepended to the list
     """
-    pass  # implement me
+    lst.insert(0, a)
+    return lst
 
 def add_item_end(lst, a):
     """
     This function takes a list and an item,
     returning the list with the item appended to the list
     """
-    pass  # implement me
+    lst.append(a)
+    return lst
 
 def add_list_to_list(lsta, lstb):
     """
@@ -119,24 +122,26 @@ def square_each_item(lst):
     """
     pass # implement me
 
-def remove_empty_strs(lst):
-     """
-     Remove empty strings from the list of strings
-     """
-     pass
-
-
 def remove_item_from(lst, aaa):
     """
     Remove all occurrences of a specific item from a list.
     """
-    pass
+    return [item for item in lst if item is not aaa]
+
+
+def remove_empty_strs(lst):
+    """
+    Remove empty strings from the list of strings
+    """
+    return remove_item_from(lst, '')
+
 
 def leave_item_in(lst, aaa):
     """
     Leave all occurrences of a specific item in a list.
     """
     pass
+
 
 def length_of(lst):
     """
